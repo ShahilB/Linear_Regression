@@ -23,7 +23,8 @@ Linear_Regression/
 ├── weight-height.csv           # Training dataset
 ├── template/                   # HTML templates for web app
 │   ├── index.html             # Input form
-│   └── results. html           # Prediction results
+│   └── results.html           # Prediction results
+├── requirements.txt            # Python dependencies
 └── README.md                   # Project documentation
 ```
 
@@ -42,6 +43,15 @@ Linear_Regression/
 - **R² Score**: 0.858 (85.8% variance explained)
 - **RMSE**: ~12.21
 - **Train-Test Split**: 80-20
+- **Dataset Size**: 10,000 samples
+
+## 📁 Dataset Information
+
+The `weight-height.csv` dataset contains 10,000 records with two columns:
+- **Height**: Height in inches
+- **Weight**: Weight in pounds
+
+This dataset is used to train the Linear Regression model to understand the correlation between height and weight.
 
 ## 🔧 Installation
 
@@ -53,6 +63,11 @@ Linear_Regression/
 
 2. **Install required dependencies**:
    ```bash
+   pip install -r requirements.txt
+   ```
+   
+   Or install individually:
+   ```bash
    pip install pandas numpy scikit-learn flask
    ```
 
@@ -62,7 +77,7 @@ Linear_Regression/
 
 Open `LR_model.ipynb` to see the model training process: 
 ```bash
-jupyter notebook LR_model. ipynb
+jupyter notebook LR_model.ipynb
 ```
 
 ### Running the Flask Web App
@@ -95,8 +110,14 @@ jupyter notebook LR_model. ipynb
 
 ## 📝 Example
 
-**Input**:  Height = 70 inches  
-**Output**:  Predicted Weight ≈ 180. 5 lbs
+**Input**: Height = 70 inches  
+**Output**: Predicted Weight ≈ 180.5 lbs
+
+## 🔍 Troubleshooting
+
+- **Model file not found**: Ensure `height_weight_model.pkl` exists. If not, run the Jupyter notebook (`LR_model.ipynb`) to generate it.
+- **Template not found error**: Make sure the `template/` folder exists with `index.html` and `results.html`.
+- **Import errors**: Verify all dependencies are installed using `pip install -r requirements.txt`.
 
 ## 🤝 Contributing
 
